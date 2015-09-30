@@ -84,7 +84,8 @@ h1 {
   color: white;
   text-transform: uppercase;
   text-align: center;
-  font-size: 32px;
+  font-size: 26px;
+  font-weight: bold;
   padding: 5vh 0;
 }
 
@@ -141,7 +142,7 @@ span.x-label {
 span.x-label,
 span.icon {
   position: absolute;
-  bottom: -50px;
+  bottom: -70px;
   left: 50%;
   transform: translateX(-50%);
   opacity: 0.6;

@@ -4,6 +4,7 @@ $(() => {
     template: $('#chart-template').html(),
     element: $('#mood-div'),
     header: 'Feelings',
+    test: 'asf',
     bars: [
       { icon: 'assets/Icon_extremely_happy.svg' },
       { icon: 'assets/Icon_happy.svg' },
