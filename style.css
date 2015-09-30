@@ -1,0 +1,187 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
+ */
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strong, sub, sup, var,
+b, u, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+  font-family: sans-serif;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.whole {
+  background-image: url('assets/dashboard_visitors.png');
+  width: 100%;
+}
+
+.half {
+  width: 50%;
+  display: inline-block;
+  float: left;
+}
+
+div#mood-div,
+div#age-div,
+div#averages {
+  height: 50vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+div#mood-div {
+  background-image: url('assets/dashboard_feeling.png');
+}
+
+div#age-div {
+  background-image: url('assets/dashboard_age.png');
+}
+
+h1 {
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 32px;
+  padding: 5vh 0;
+}
+
+h1#visitors-header {
+  color: #004c80;
+}
+
+section.visitor-data {
+  width: 90vw;
+  margin: 0 auto;
+}
+
+section.visitor-data .legend {
+  padding-top: 10px;
+  font-size: 22px;
+  color: #bbb;
+}
+
+div#averages .quarter {
+  width: 20%;
+  display:inline-block;
+  float: left;
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: #602977;
+  padding-top: 5vh;
+}
+
+div#averages .quarter:last-of-type {
+  width: 30%;
+}
+
+div#average-user {
+  display: inline-block;
+  width: 50%;
+  padding-top: 5vh;
+}
+
+span.label {
+  color: white;
+  font-size: 22px;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+span.x-label {
+  font-size: 22px;
+  color: white;
+}
+
+span.x-label,
+span.icon {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.6;
+}
+
+span.icon {
+  width: 32px;
+  height: 32px;
+}
+
+main {
+  width: 75%;
+  margin: 0 auto;
+  height: 50%;
+}
+
+main section {
+  height: 100%;
+  width: 12%;
+  position: relative;
+  margin: 0 4%;
+  display: inline-block;
+  text-align: center;
+}
+
+main section:first-of-type {
+  margin: 0 4% 0 2%;
+}
+
+main section:last-of-type {
+  margin: 0 2% 0 4%;
+}
+
+div.bar {
+  display: block;
+  width: 100%;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+
+  transition: all 0.5s ease-out;
+}
+
