@@ -1,5 +1,10 @@
 $(() => {
 
+  let config = {
+    updateInterval: 5000,
+    getUrl: 'http://localhost:8080/analysis'
+  };
+
   let moodChart = {
     template: $('#chart-template').html(),
     element: $('#mood-div'),
@@ -50,29 +55,34 @@ $(() => {
     });
   };
 
-  let loadData = () => {
+  let loadData = async () => {
 
-    /* TODO: get real data from API */
+    let data;
 
-    let parsedChartData = [ 
-      Math.floor(Math.random()*100),
-      Math.floor(Math.random()*100),
-      Math.floor(Math.random()*100),
-      Math.floor(Math.random()*100),
-      Math.floor(Math.random()*100)
-    ];
+    try {
+      data = await $.get(config.getUrl);
+    } catch (err) {
+      console.error(err);
+      return;
+    }
 
-    [moodChart, ageChart].forEach((chart) => {
-      chart.bars.map((bar, index) => {
-        bar.height = parsedChartData[index];
-        bar.label = bar.height + '%';
-        return bar;
+    if (data.moods && data.moods.length === moodChart.bars.length) {
+      data.moods.forEach( (mood, index) => {
+        moodChart.bars[index].height = mood;
+        moodChart.bars[index].label = `${mood}%`;
       });
-    });
+    }
+
+    if (data.ages && data.ages.length === ageChart.bars.length) {
+      data.ages.forEach( (age, index) => {
+        ageChart.bars[index].height = age;
+        ageChart.bars[index].label = `${age}%`;
+      });
+    }
 
     render();
   };
 
   loadData();
-  window.setInterval(loadData, 5000);
+  window.setInterval(loadData, config.updateInterval);
 });
