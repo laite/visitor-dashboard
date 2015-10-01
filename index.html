@@ -31,11 +31,11 @@
     <h1 id="visitors-header">{{ header}}</h1>
     <section class="visitor-data">
       {{#visitors}}
-      <div class="quarter">{{ value }}
+      <div class="quarter visitor-value">{{ value }}
         <p class="legend">{{ title }}</p>
       </div>
       {{/visitors}}
-      <div class="quarter" id="average-user">
+      <div class="quarter visitor-value" id="average-user">
       {{#average}}
         {{ gender }}, {{ age }}, {{ mood }}
         <p class="legend">{{ title }}</p>

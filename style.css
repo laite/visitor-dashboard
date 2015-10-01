@@ -1,7 +1,19 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-v2.0 | 20110126
-License: none (public domain)
- */
+@font-face {
+  font-family: 'Lato Regular';
+  src: url('assets/fonts/Lato-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Lato Medium';
+  src: url('assets/fonts/Lato-Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Lato Black';
+  src: url('assets/fonts/Lato-Black.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Lato Bold';
+  src: url('assets/fonts/Lato-Bold.ttf') format('truetype');
+}
 
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -27,9 +39,10 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
+
 body {
   line-height: 1;
-  font-family: sans-serif;
+  font-family: 'Lato Regular', sans-serif;
 }
 ol, ul {
   list-style: none;
@@ -81,11 +94,13 @@ div#age-div {
 }
 
 h1 {
-  color: white;
+  color: rgba(255, 255, 255, 0.8);
   text-transform: uppercase;
   text-align: center;
   font-size: 26px;
+  font-family: 'Lato Black';
   font-weight: bold;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
   padding: 5vh 0;
 }
 
@@ -109,10 +124,22 @@ div#averages .quarter {
   display:inline-block;
   float: left;
   text-align: center;
-  font-size: 32px;
   font-weight: bold;
-  color: #602977;
   padding-top: 5vh;
+}
+
+div.visitor-value {
+  color: #98297d;
+  font-family: 'Lato Medium';
+  font-size: 44px;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+div.visitor-value .legend {
+  font-family: 'Lato Regular';
+  font-size: 16px;
+  color: rgba(0, 76, 128, 0.5);
+  text-shadow: none;
 }
 
 div#averages .quarter:last-of-type {
@@ -126,17 +153,27 @@ div#average-user {
 }
 
 span.label {
-  color: white;
   font-size: 22px;
+  font-family: 'Lato Bold';
   position: absolute;
   top: -30px;
   left: 50%;
   transform: translateX(-50%);
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+#mood-div span.label {
+  color: #6ecef0;
+}
+
+#age-div span.label {
+  color: #d52384;
 }
 
 span.x-label {
   font-size: 22px;
-  color: white;
+  font-family: 'Lato Regular';
+  color: rgba(255, 255, 255, 0.5);
 }
 
 span.x-label,
@@ -145,7 +182,7 @@ span.icon {
   bottom: -70px;
   left: 50%;
   transform: translateX(-50%);
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 span.icon {
@@ -161,28 +198,21 @@ main {
 
 main section {
   height: 100%;
-  width: 12%;
+  width: 10%;
   position: relative;
-  margin: 0 4%;
+  margin: 0 5%;
   display: inline-block;
   text-align: center;
-}
-
-main section:first-of-type {
-  margin: 0 4% 0 2%;
-}
-
-main section:last-of-type {
-  margin: 0 2% 0 4%;
 }
 
 div.bar {
   display: block;
   width: 100%;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.9);
   position: absolute;
   bottom: 0;
 
   transition: all 0.5s ease-out;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
