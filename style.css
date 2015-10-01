@@ -191,6 +191,7 @@ span.icon {
 }
 
 main {
+  position: relative;
   width: 75%;
   margin: 0 auto;
   height: 50%;
@@ -204,6 +205,19 @@ main section {
   display: inline-block;
   text-align: center;
 }
+
+div.stripe {
+  position: absolute;
+  width: 100%;
+  margin: 0 auto;
+  height: 25%;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+div.stripe-1 { top: 0; }
+div.stripe-2 { top: 25%; }
+div.stripe-3 { top: 50%; }
+div.stripe-4 { top: 75%; border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
 
 div.bar {
   display: block;
